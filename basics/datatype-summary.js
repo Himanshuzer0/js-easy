@@ -32,6 +32,7 @@ let myObj = {
     name: "Golu",
     age:22
 }
+console.log(typeof heros);
 
 // Function declare using  variable  and its called object function 
 const myFunction = function(){
