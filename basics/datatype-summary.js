@@ -32,11 +32,40 @@ let myObj = {
     name: "Golu",
     age:22
 }
-console.log(typeof heros);
+// console.log(typeof heros);
 
 // Function declare using  variable  and its called object function 
 const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof myFunction);
+// console.log(typeof myFunction);
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+// Stack  (Primitive), Heap (Non_ Primitive ) 
+// Stack memory used they give copy of variable 
+// In Heap memory define they give reference of original value 
+
+
+let myYoutubeName = "himanshubgmi" 
+let anotherName = myYoutubeName
+anotherName = "Javascript"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "admin@.com"
+console.log(userOne.email);
+console.log(userTwo.email);
