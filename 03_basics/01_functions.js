@@ -30,13 +30,53 @@ const result = addTwoNumber(5,6)
 
 // console.log("Result :", result);
 
-function userName(username = "ram"){
+function userName(username){
     if(username == undefined){
         console.log("Please enter a username");
+        return
     }
     return `${username} just logged in`
 }
 
 // console.log(userName("Hanuman"))
-console.log(userName())
+// console.log(userName());
 
+
+
+function cartPrice(val1, val2,...num1){
+     return num1
+}
+
+// console.log(cartPrice(200, 400, 500, 1000, 2000));
+
+const user = {
+    username : "ram",
+    price : 199
+}
+// its a object then this object pass in the function
+
+
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+
+
+//call the function
+// handleObject(user)
+handleObject({
+    username: "sam",
+    price : 400
+})
+
+// pass the array data type
+const myNewArray = [200, 400 , 500, 800]
+
+function manageArrayValue(Arrayget){
+    return Arrayget[2]
+
+}
+
+// console.log(manageArrayValue(myNewArray));
+console.log(manageArrayValue([200, 400, 500, 800]));
