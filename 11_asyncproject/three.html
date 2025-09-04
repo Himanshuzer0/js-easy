@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hanuman kumar</h1>
+    <button id="start">start</button>
+    <button id ="stop">stop</button>
+</body>
+<script>
+    let storeTimeValue; // store interval here
+
+  const sDate = function(e){
+    console.log(e,Date.now());
+  }
+
+  // start button
+  document.querySelector('#start').addEventListener('click', function(){
+    if(!storeTimeValue){
+        storeTimeValue = setInterval(sDate, 1000 , "RAM");
+        console.log("Interval Started");
+
+    }
+  });
+
+  // stop button
+  document.querySelector('#stop').addEventListener('click', function (){
+    clearInterval(storeTimeValue);
+    storeTimeValue = null; 
+    console.log("Interval stopped");
+  })
+  </script>
+
+
+</html>
