@@ -2,18 +2,18 @@ const promiseOne = new Promise(function (resolve, reject) {
         // Do an async task
             // DB calls ,  cryptography, network
                 setTimeout(function () {
-                        console.log('Async task is completed');
+                        // console.log('Async task is completed');
                         resolve()  // pass the resolve then connect .then
                             }, 1000)
                             })
 
                             promiseOne.then(function () {
-                                console.log('Promise consumed');
+                               // console.log('Promise consumed');
                                 })
  // without variable
  new Promise(function(resolve, reject){ 
     setTimeout(function(){
-        console.log('Async task 2');
+       // console.log('Async task 2');
         resolve()
 
     }, 1000)
@@ -21,7 +21,7 @@ const promiseOne = new Promise(function (resolve, reject) {
 
  })
  .then(function(){
-    console.log('Async 2 resolved ');
+  //  console.log('Async 2 resolved ');
  })
 
  
@@ -35,7 +35,7 @@ const promiseOne = new Promise(function (resolve, reject) {
  })
 
  promiseThree.then(function(user){  // resolve ke data ko yeha pe access kr liye 
-    console.log(user);
+    //console.log(user);
  })
 
  // ---------------------
@@ -55,34 +55,46 @@ const promiseOne = new Promise(function (resolve, reject) {
 
  promiseFour.then((user) =>{
     //only user name chahiye
-    console.log(user);
+   // console.log(user);
     return user.username
 
 
  })
  .then((username)=>{
-    console.log(username);
+  //  console.log(username);
  })
  .catch(function(error){
-    console.log(error);
+  //  console.log(error);
  })
- .finally(()=> console.log("The promise is either resolved or rejected"));
+// .finally(()=> console.log("The promise is either resolved or rejected"));
 
 
  //---------------------------
 
-const promiseFive = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        let error = false
-        if(!error){
-            resolve({username: "Javascript", password: "12345"})
-        }
-        else{
-            reject('ERROR : Js went wrong ')
-        }
+// const promiseFive = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         let error = false
+//         if(!error){
+//             resolve({username: "Javascript", password: "12345"})
+//         }
+//         else{
+//             reject('ERROR : Js went wrong ')
+//         }
 
-    }, 1000)
+//     }, 1000)
 
 
+// });
+// async function consumePromiseFive(){
+//      const response = await promiseFive
+//      console.log(response);
+// }
+ // fetch api request
+fetch('https://api.github.com/users/Himanshuzer0')
+.then((response)=>{
+    return response.json()
 })
-
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=> console.log(error))
