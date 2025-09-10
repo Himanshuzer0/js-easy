@@ -7,7 +7,7 @@ const promiseOne = new Promise(function (resolve, reject) {
                             }, 1000)
                             })
 
-                            promiseOne.then(function () {
+                            promiseOne.t026hen(function () {
                                // console.log('Promise consumed');
                                 })
  // without variable
