@@ -23,5 +23,19 @@ function User(username, logincount, isloggedin){
 
 const userOne = new User("Hanuman", 15, true)
 const userTwo = new User("Himanshu", 25, false)
-console.log(userOne);
-console.log(userTwo);
+// console.log(userOne);
+// console.log(userTwo);
+
+
+
+function car(make, model , year){
+   this.make = make;
+    this.model =  model ;
+    this.year = year;
+}
+
+const  auto = new car ('Honda', 'Ford', 1999);
+
+console.log(auto instanceof car);
+
+console.log(auto instanceof Object);
