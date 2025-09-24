@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping </title>
+</head>
+<body style="background-color:#313131">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+<body>
+    
+
+    
+</body>
+<script>
+    // function init(){
+    //     let  name = "Mozilla";
+    //     function displayName(){
+    //         console.log(name); // use variavle declared in the parent function
+    //     }
+    //     displayName();
+    // }
+    // init(); // Main function
+ 
+
+   // function outer(){ // function me jo bhi declare krte hai wo outer space me work nhi krta hai 
+        // let username = "himanshu"
+        // function inner(){
+        //     let secret = "my123"
+        //     console.log("Inner",username);
+        // }
+        // function innerTwo(){
+        //     console.log("innerTwo", username);
+            // console.log(secret); // ye access nhi krega 
+        // }
+        //inner() // reference for call the value
+        // innerTwo() // reference for call the value
+    // }
+    // outer()
+    // console.log("TOO OUTER",username); // ye outer space hai 
+
+
+//--------------------------------------
+
+    // function makeFunc(){ // making a function 
+    //     const name = "Mozilla"; // cnostant declare name 
+    //     function displayName(){ // declare a function called displayname 
+    //         console.log(name); // 
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+</script>
+
+<script>
+//     document.getElementById("orange").onclick = function(){
+//         document.body.style.backgroundColor = `orange`
+//     }
+//  document.getElementById("green").onclick = function(){
+//         document.body.style.backgroundColor = `green`
+//      }
+  // Agar 500 button ho tb kaise code likhenge 
+
+  function clickHandler(color){
+    //document.body.style.backgroundColor = `${color}`
+    return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+  }
+   document.getElementById("orange").onclick = clickHandler("orange")  // --> clickHandler ek reference hai//method me value pass krna hai
+    document.getElementById("green").onclick = clickHandler("green")
+
+
+</script>>
+
+
+</html>
+
+
+
